@@ -31,7 +31,10 @@ class ProtobufConverter {
     return ScanResult(
       result: resultFrom(
           getValue: () => DiscoveredDevice(
-              id: message.id, name: message.name, serviceData: serviceData),
+              id: message.id,
+              name: message.name,
+              serviceData: serviceData,
+              rssi: message.rssi),
           failure: genericFailureFrom(
               hasFailure: message.hasFailure(),
               getFailure: () => message.failure,
